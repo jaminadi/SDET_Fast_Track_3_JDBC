@@ -30,6 +30,7 @@ public class SpartanTests {
         statement = connection.createStatement();
         resultSet = statement.executeQuery(query);
     }
+
     @AfterMethod
     public void close() throws SQLException {
         resultSet.close();
