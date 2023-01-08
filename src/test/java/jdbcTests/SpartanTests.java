@@ -83,7 +83,6 @@ Four Methods that allows us to read and manipulate the DataBase information, NEV
 3. resultSetMetaData.getColumnName(i)  ---> each row Map Key information
 4.  resultSet.getObject(i) -----> each row Map Value information
  */
-
             queryResult.add(eachRow);
         }
 
