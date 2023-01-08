@@ -5,12 +5,12 @@ What is JDBC?
     * Connection String : URL + UserName + Password
     * Driver of the Database : defined in the pom.xml as dependency
 
-JDBC helps us with code reusability
+JDBC helps us with code re-usability
 
 How we are using JDBC?
     1. Connect to DB
     2. Execute some queries
-    3. Retrive your result and manipulate the data that comes
+    3. Retrieve your result and manipulate the data that comes
 
 In Cucumber Framework how do we handle before and after methods?
 *** Hooks Class: we create custom hooks with special tag name
