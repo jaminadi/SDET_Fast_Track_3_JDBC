@@ -16,7 +16,6 @@ public class Hooks {
 //        // we put a logic that should apply to every scenario
 //        Driver.get().manage().window().maximize();
 //        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//
 //    }
 //
 //    @After
@@ -41,6 +40,4 @@ public class Hooks {
         System.out.println("Closing DB connection");
         DBUtils.destroy();
     }
-
-
 }

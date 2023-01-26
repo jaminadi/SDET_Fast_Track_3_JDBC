@@ -28,7 +28,6 @@ public class TwoPointVerStepDefs {
 
         System.out.println("actualName = " + actualNameFromUI);
         System.out.println("expectedName = " + expectedName);
-
     }
 
     @Then("DB and UI info should match")
