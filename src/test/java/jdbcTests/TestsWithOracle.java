@@ -11,12 +11,12 @@ public class TestsWithOracle {
 // 100.26.60.119
     @Test
     public void connectionTest() throws SQLException {
-        // 3 important steps of using JDBC library
+        // 3 important steps of using JDBC library to connect
         Connection connection;
         Statement statement;
         ResultSet resultSet;
         // Connection String
-        String dbUrl = "jdbc:oracle:thin:@54.234.179.88:1521:xe";
+        String dbUrl = "jdbc:oracle:thin:@44.204.231.116:1521:xe";
         String dbUserName = "hr";
         String dbPassword = "hr";
 

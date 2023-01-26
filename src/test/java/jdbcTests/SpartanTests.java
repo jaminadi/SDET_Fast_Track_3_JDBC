@@ -17,13 +17,13 @@ public class SpartanTests {
     Connection connection;
     Statement statement;
     ResultSet resultSet;
-    // List all employees name, lastName and salary from employees table
+    // List all spartan_id, name, gender from spartans table
     String query = "select spartan_id, name, gender from spartans";
 
     @BeforeMethod
     public void connect() throws SQLException {
    // Connection String
-        String dbUrl = "jdbc:oracle:thin:@54.234.179.88:1521:xe";
+        String dbUrl = "jdbc:oracle:thin:@44.204.231.116:1521:xe";
         String dbUserName = "SP";
         String dbPassword = "SP";
         connection = DriverManager.getConnection(dbUrl,dbUserName,dbPassword);
@@ -63,18 +63,20 @@ The best way of representing DB info into JAVA is to store them into List<Map<St
     @Test
     public void createDBListofMap() throws SQLException {
         ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
-        int columnCount = resultSetMetaData.getColumnCount();
+        int columnCount = resultSetMetaData.getColumnCount(); //1. this method allows you to know the column count info
 
         // create an empty List to store DB info
         List<Map<String,Object>> queryResult = new ArrayList<>();
 
-        while (resultSet.next()){
+        while (resultSet.next()){ //2. you need this method to move from each row, from top to bottom
             // each row coming from DataBase will be stored in a Map<String,Object>
             Map<String,Object> eachRow = new HashMap<>();
             for (int i = 1; i <= columnCount; i++) {
             // Key is the column name: resultsetmetadata.getColumnName method
             // Value is the cell Data : resultSet.getObject(index)
                 eachRow.put(resultSetMetaData.getColumnName(i) , resultSet.getObject(i));
+                //get.columnName(i) - find out column name. this represents your key in the Map
+                // getObject(i) - is for obtaining cell value information
           }
 /*
 Four Methods that allows us to read and manipulate the DataBase information, NEVER FORGET
